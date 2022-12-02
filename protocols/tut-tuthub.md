@@ -18,6 +18,7 @@ interface File {
 
 interface Commit {
     id: UUID
+    message: string
     files: File[]
 }
 
