@@ -2,9 +2,9 @@
 
 ## 概要
 
-huthub.topは、チュートリアル作成CLIツール「Tut」のホスティングサービスである。
+tuthub.topは、チュートリアル作成CLIツール「Tut」のホスティングサービスである。
 
-tutからtuthub.topにpushすると、web.tuthub.topでチュートリアルサイトが公開されるサービスである。
+tutからtuthub.topにpushすると、tuthub-page.comでチュートリアルサイトが公開されるサービスである。
 
 ## シナリオ
 
@@ -31,7 +31,7 @@ flowchart TD
 A[Sign in/up] --> B[ユーザリポジトリリスト]
 ```
 
-### page.tuthub.top画面遷移
+### tuthub-page.comp画面遷移
 
 ```mermaid
 flowchart TD
@@ -52,7 +52,7 @@ A --> A
 
 ただし、メールアドレスとパスワードでSign in/upし、Sign inするとリポジトリ一覧のリストが表示され、リストにはリポジトリのリンクがある。
 
-### page.tuthub.topの使用感
+### tuthub-page.comの使用感
 
 基本的に[SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)と同じ
 
