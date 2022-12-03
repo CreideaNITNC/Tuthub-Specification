@@ -56,3 +56,28 @@ A --> A
 
 基本的に[SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)と同じ
 
+## 画面ごとの仕様
+
+### tuthub.top画面
+
+PC用の画面のみでOK
+
+#### Sign in/up画面
+
+- Sign inするためのメールアドレスとパスワードの入力欄、Sign inボタン
+- Sign upするためのメールアドレスとパスワードの入力欄、Sign upボタン
+- TutHubの説明（カッコよく）
+
+#### 個人のリポジトリ一覧画面
+
+- 作成済みのリポジトリを表示する
+- リポジトリ名
+- 新規リポジトリ作成（リポジトリ名の入力欄と作成ボタン）
+- リポジトリのリンクを取得（コピー）できる機能
+- リポジトリの削除機能
+
+### tuthub-page.comの画面
+
+スマホ用画面とPC用画面が欲しい
+
+基本的にSwiftUIの画面と同じで、カラーリングの方面で
