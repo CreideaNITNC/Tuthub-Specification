@@ -26,14 +26,14 @@ interface Commit {
     codes: SourceCode[]
 }
 
-interface Tag {
+interface Section {
     id: UUID
     name: string
     commits: Commit[]
 }
 
 interface Data {
-    tags: Tag[]
+    sections: Tag[]
 }
 ```
 
