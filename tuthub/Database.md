@@ -24,7 +24,7 @@ repositories {
     Date updated_at
 }
 
-tags {
+sections {
     UUID id PK
     string name
     int number
@@ -37,7 +37,7 @@ commits {
     UUID id PK
     int step
     string message
-    UUID tag_id FK
+    UUID section_id FK
     Date created_at
     Date updated_at
 }
@@ -62,8 +62,8 @@ source_codes {
 
 users ||--|| sign_users: ""
 users ||--o{ repositories: ""
-repositories ||--o{ tags: ""
-tags ||--o{ commits: ""
+repositories ||--o{ sections: ""
+sections ||--o{ commits: ""
 commits ||--o{ pictures: ""
 commits ||--|{ source_codes: ""
 ```
@@ -81,13 +81,13 @@ commits ||--|{ source_codes: ""
 - user_id: cascade delete
 - user_id & name: 複合一意制約
 
-### tags
+### sections
 
 - repository_id: cascade delete
 
 ### commits
 
-- tag_id: cascade delete
+- section_id: cascade delete
 
 ### pictures
 
