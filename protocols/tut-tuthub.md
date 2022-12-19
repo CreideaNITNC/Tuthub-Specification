@@ -9,27 +9,31 @@
 - JSON
 
 ```ts
-interface File {
+interface Picture {
     name: string
-    type: 'image' | 'text'
-    /** 画像の場合base64 encode*/
+    bin: string // base64 encode
+}
+
+interface SourceCode {
+    name: string
     content: string
 }
 
 interface Commit {
     id: UUID
     message: string
-    files: File[]
+    pictures: Picture[]
+    codes: SourceCode[]
 }
 
-interface Tag {
+interface Section {
     id: UUID
     name: string
     commits: Commit[]
 }
 
 interface Data {
-    tags: Tag[]
+    sections: Tag[]
 }
 ```
 
