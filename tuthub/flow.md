@@ -56,10 +56,10 @@ SignService->>SignRepository: mail or nameに応じたユーザパスワード�
 SignRepository->>DB: クエリ
 DB->>SignRepository: 結果
 SignRepository->>SignService: 結果
-alt passwordとハッシュ値が一致
+alt passwordとハッシュ値が不一致
     SignService->>SignController: エラー
     SignController->>creator: 失敗表示
-else passwordとハッシュ値が不一致
+else passwordとハッシュ値が一致
     SignService->>SignController: サインインユーザ
     SignController->>Session: Sessionログイン
     SignController->>creator: Homeへ画面遷移
@@ -112,6 +112,7 @@ participant DB
 browser->>controller: 特定のセクションの内容を要求
 controller->>service: 閲覧依頼
 service->>cache: キャッシュ確認
+cache->>service: キャッシュの有無
 alt cacheにある
     cache->>service: データ
 else cacheにない
